@@ -1,0 +1,63 @@
+
+GET http://localhost:3900/api/probando
+
+###
+
+GET http://localhost:3900/api/testController
+
+###
+
+//Crear un artículo
+
+POST http://localhost:3900/api/save HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Articulo para borrar",
+    "content": "Artículo Ocho para borrar"
+}
+
+###
+
+//Obtener todos los artículos
+GET http://localhost:3900/api/articles/
+
+
+###
+//Obtener sólo un artículo
+GET http://localhost:3900/api/article/609f175665fc7a14c18fd405
+
+###
+//Actualizar artículos
+PUT http://localhost:3900/api/article/609ecf7fcd0e6d0c910d8425 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Nuevo Septimo Articulo",
+    "content": "Nuevo Nuevo Siete"
+}
+
+###
+
+//Borrar un artículo
+
+DELETE http://localhost:3900/api/article/609efd8b888f5c10efdb034b
+
+###
+
+//Subir imagen
+
+POST http://localhost:3900/api/upload-image/609f175665fc7a14c18fd405
+
+###
+
+//Obtener una imagen
+
+GET http://localhost:3900/api/get-image/4zvhkrdGG-H2RyZuuaygoWga.jpeg
+
+###
+
+GET http://localhost:3900/api/search/fds
+
+
+
