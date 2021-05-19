@@ -4,10 +4,9 @@
 
 let express = require('express');
 
-
-// Aquí se ejecuta express (http)
-
 let app = express();
+
+var cors = require('cors');
 
 //Cargar ficheros rutas
 
@@ -15,6 +14,7 @@ let article_routes = require('./routes/article');
 
 
 //Middlewares
+app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
